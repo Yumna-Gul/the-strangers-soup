@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FDF8F2;
+  font-family: 'Georgia', serif;
+  color: #3D2B1A;
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+}
+
+textarea {
+  font-family: 'Georgia', serif;
+}

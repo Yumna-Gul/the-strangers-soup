@@ -8,7 +8,7 @@ A real-time anonymous micro-community where strangers hold each other's pain —
 ---
 
 ## 🎬 Demo Video
-📹 [Watch the demo →](YOUR_YOUTUBE_LINK_HERE)
+📹 [Watch the demo →](https://youtu.be/XOYCgC9Wlxk)
 
 ## 🌐 Live App
 🔗 [Try it yourself →](YOUR_DEPLOYED_URL_HERE)

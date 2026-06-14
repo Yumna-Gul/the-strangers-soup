@@ -107,7 +107,7 @@ const HELPLINES = {
 }
 
 function getHelpline(countryCode) {
-  return HELPLINES[countryCode] || HELPLINES.default
+  return HELPLINES['PK'] //HELPLINES[countryCode] || HELPLINES.default
 }
 
 module.exports = { analyzeVent, checkKindness, getHelpline }

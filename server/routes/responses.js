@@ -4,26 +4,25 @@ const router= express.Router()
 const ResponseModel = require('../models/Response')
 const Confession = require('../models/Confession')
 
-console.log('Response import:', ResponseModel) // Debugging line to check the import
-console.log('Confession import:', Confession) // Debugging line to check the import
+
 
 router.post('/', async (req, res) => {
 
     try{
     const {confessionId,sessionId,text} = req.body
-    console.log('Response body:', { confessionId, sessionId, text })
+
      
     const status = await checkKindness(text)
 
   const kindnessCheck = await checkKindness(text)
 
-if(kindnessCheck.tone === "unkind"){
-  return res.status(200).json({
-    status: "unkind", 
-    message: "This space is for healing. Your words could hurt someone who's already struggling.",
-    suggestion: kindnessCheck.rewrite
-  })
-}
+    if(kindnessCheck.tone === "unkind"){
+      return res.status(200).json({
+        status: "unkind", 
+        message: "This space is for healing. Your words could hurt someone who's already struggling.",
+        suggestion: kindnessCheck.rewrite
+      })
+    }
 
     const newResponse = new ResponseModel({confessionId,sessionId,text})
     await newResponse.save()

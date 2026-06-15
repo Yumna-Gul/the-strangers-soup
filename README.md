@@ -14,7 +14,7 @@ A real-time anonymous micro-community where strangers hold each other's pain —
 🔗 [Try it yourself →](https://kroki.io/mermaid/svg/eNpdkUGP2jAQhe-V-h_mXnHqvVJCgGYhAZGlPbgcLDIYi-CJPE5WdNP_Xsex6FJLPljzvTeeN8rK9gKv2edP4E8iDowWqEXDINv2CLPZN0hFYsjcb9Qx9KiURjDyhiCZtTJYHydxGuC52OnTFfBGTpOBcyN7spGYByITP6126K2Mi4UsFBbvye_OImx9-ySHXkso9MkS09nBkjpT2_svU8kzujvsUTIZbRQkyhv9mYwWwWiokuVigKX44SvgL1qGlhzMoCCjKEuPT3iWV6-HfZqXqwFWwrc-UTs6c6cUcpjjyweb_8RJuVrst4dqgO8ibeh0xdrjc6tZM1ywaRttEPhCbyYql0GZi8pZaZQP3Pd4ss4D8PIPeBsTY7DILRnGiL0EbP0es4G1NrVB5qdI1tM313mZDbAR-2gBLPvH6iJzKCeqGDOwGJtevWtzj2QRyM302Eyyr49_8QCl2HVN4yM4W7p9GKkM7HbavfUKWfuJre6lw4f7NkA7sUEH2kGBzbizGht0oyNZ7NEe_wLCq9Ki)
 
 ## 🌐 Live App
-🔗 [Try it yourself →](YOUR_DEPLOYED_URL_HERE)
+🔗 [Try it yourself →](https://the-strangers-soup-s8nh.vercel.app/)
 
 ---
 

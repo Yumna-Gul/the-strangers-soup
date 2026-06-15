@@ -52,10 +52,15 @@ router.get('/mine/:sessionId', async (req, res) => {
 router.get('/random', async (req, res) => {
     try {
         const { sessionId } = req.query
-        
+
+        // find confessions this user already responded to
+        const Response = require('../models/Response')
+        const responded = await Response.find({ sessionId }).distinct('confessionId')
+
         const count = await Confession.countDocuments({ 
             removedFromPot: false,
-            sessionId: { $ne: sessionId } 
+            sessionId: { $ne: sessionId },
+            _id: { $nin: responded }  // exclude already responded
         })
         
         if (count === 0) {
@@ -66,7 +71,8 @@ router.get('/random', async (req, res) => {
         
         const confession = await Confession.findOne({ 
             removedFromPot: false, 
-            sessionId: { $ne: sessionId } 
+            sessionId: { $ne: sessionId },
+            _id: { $nin: responded }  // exclude already responded
         }).skip(randomIndex)
         
         res.json(confession)

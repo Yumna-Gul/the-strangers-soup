@@ -4,6 +4,7 @@ import Landing from './pages/Landing'
 import Vent from './pages/Vent'
 import MyResponses from './pages/MyResponses'
 import { getSession } from './utils/session'
+import API_BASE from './config'
 
 function AppContent() {
   const { sessionId, veggieName } = getSession()
@@ -19,7 +20,7 @@ function AppContent() {
     setCountry(cached)
     return
   }
-  fetch('http://localhost:5000/api/country')
+  fetch(`${API_BASE}/api/country`)
     .then(res => res.json())
     .then(data => {
       setCountry(data.country || 'US')

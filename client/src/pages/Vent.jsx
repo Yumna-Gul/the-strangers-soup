@@ -5,7 +5,7 @@ import VentSurface from '../components/VentSurface'
 import { PageShell, Header, SoupButton, SoupCard, SafetyBanner } from '../components/PageShell'
 import { FLAVOR_MAP } from '../theme'
 import axios from 'axios'
-
+import API_BASE from '../config'
 function Vent({ veggieName, sessionId, flavor, country, goTo }) {
   const [text, setText] = useState('')
   const [ventSubmitted, setVentSubmitted] = useState(false)
@@ -36,7 +36,7 @@ function Vent({ veggieName, sessionId, flavor, country, goTo }) {
     if (startRect && potRect) setFlyingVent({ text, startRect, potRect })
     setLoading(true)
     try {
-      const res = await axios.post('http://localhost:5000/api/confessions', {
+      const res = await axios.post(`${API_BASE}/api/confessions`, {
         veggieName, flavor, text, sessionId, country
       })
       if (res.data.status === 'dangerous') {
@@ -63,7 +63,7 @@ function Vent({ veggieName, sessionId, flavor, country, goTo }) {
   const stirPot = async () => {
     setStirring(true)
     try {
-      const res = await axios.get('http://localhost:5000/api/confessions/random', {
+      const res = await axios.get(`${API_BASE}/api/confessions/random`, {
         params: { sessionId }
       })
       setTimeout(() => setShowSurface(true), 1000)
@@ -82,7 +82,7 @@ function Vent({ veggieName, sessionId, flavor, country, goTo }) {
     if (!response.trim()) return
     setLoading(true)
     try {
-      const res = await axios.post('http://localhost:5000/api/responses', {
+      const res = await axios.post(`${API_BASE}/api/responses`, {
         confessionId: confession._id,
         sessionId,
         text: response

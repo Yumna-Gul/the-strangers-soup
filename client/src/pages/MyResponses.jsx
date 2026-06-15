@@ -3,6 +3,7 @@ import axios from 'axios'
 import { PageShell, Header, SoupCard, StaggerItem, SkeletonLine } from '../components/PageShell'
 import { FLAVOR_MAP, FLAVORS } from '../theme'
 import MeltButton from '../components/MeltButton'
+import API_BASE from '../config'
 
 function MyResponses({ veggieName, sessionId, goTo }) {
   const [items, setItems] = useState([])
@@ -13,7 +14,7 @@ function MyResponses({ veggieName, sessionId, goTo }) {
 
   const fetchMyResponses = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/responses/my/${sessionId}`)
+      const res = await axios.get(`${API_BASE}/api/responses/my/${sessionId}`)
       setItems(res.data)
     } catch (err) {
       console.error(err)
@@ -23,7 +24,7 @@ function MyResponses({ veggieName, sessionId, goTo }) {
 
   const handleMelt = async (confessionId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/responses/my/${confessionId}`)
+      await axios.delete(`${API_BASE}/api/responses/my/${confessionId}`)
       setMeltedId(confessionId)
       setTimeout(() => {
         setItems(prev => prev.filter(item => item.confession._id !== confessionId))

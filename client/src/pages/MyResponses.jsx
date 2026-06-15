@@ -10,7 +10,7 @@ function MyResponses({ veggieName, sessionId, goTo }) {
   const [loading, setLoading] = useState(true)
   const [meltedId, setMeltedId] = useState(null)
 
-  useEffect(() => { fetchMyResponses() }, [])
+  useEffect(() => { fetchMyResponses() }, [sessionId])
 
   const fetchMyResponses = async () => {
     try {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Pot from '../components/Pot'
-import { PageShell, SoupButton } from '../components/PageShell'
+import { SoupButton } from '../components/PageShell'
 import { FLAVORS } from '../theme'
 
 function VeggiePill({ flavor, selected, onClick }) {

@@ -56,6 +56,11 @@ export const FLAVORS = [
   { name: 'Confusion',      color: '#5F5E5A', bg: '#F1EFE8', border: '#B4B2A9', veggie: '🥦', meaning: 'tangled, no clear way through' },
   { name: 'Jealousy',       color: '#1B998B', bg: '#E0F7F4', border: '#76C7B7', veggie: '🥒', meaning: 'cool on the outside, simmering inside' },
   { name: 'Regret',         color: '#7E6651', bg: '#F9F4EF', border: '#C1A68D', veggie: '🍵', meaning: 'steeped too long, now bitter' },
+  { name: "Don't Know", color: '#7A7A6E', bg: '#F4F3EE', border: '#C4C3BA', veggie: '🌫️', meaning: 'just a fog, no name for it yet' },
+  { name: 'Numb',       color: '#8A9BA8', bg: '#EDF1F4', border: '#A8BCC8', veggie: '🪨', meaning: 'too tired to feel anything at all' },
+  { name: 'Homesick',   color: '#A0522D', bg: '#FDF3EC', border: '#D4A478', veggie: '🌽', meaning: 'longing for a place or time long gone' },
+  { name: 'Anger',      color: '#C0392B', bg: '#FDECEC', border: '#E88A8A', veggie: '🌹', meaning: 'something thorny, hard to hold' },
+  { name: 'Scared',     color: '#6C5CE7', bg: '#F0EEFF', border: '#B8ADEC', veggie: '🫘', meaning: 'rattling around, afraid of what comes next' },
 ]
 
 export const FLAVOR_MAP = Object.fromEntries(

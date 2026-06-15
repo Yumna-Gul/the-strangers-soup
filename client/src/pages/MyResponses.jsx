@@ -10,7 +10,8 @@ function MyResponses({ veggieName, sessionId, goTo }) {
   const [loading, setLoading] = useState(true)
   const [meltedId, setMeltedId] = useState(null)
 
-  useEffect(() => { fetchMyResponses() }, [sessionId])
+// eslint-disable-next-line react-hooks/exhaustive-deps
+useEffect(() => { fetchMyResponses() }, [])
 
   const fetchMyResponses = async () => {
     try {
